@@ -4,18 +4,21 @@
 
 using namespace std;
 
+//default constructor
 template <class T>
 LeftistHeap<T>::LeftistHeap()
 {
 	root = NULL;
 }
 
+//copy constructor
 template <class T>
 LeftistHeap<T>::LeftistHeap(const LeftistHeap& rhs)
 {
 	this->merge(rhs);
 }
 
+//swap children of node t
 template <class T>
 void LeftistHeap<T>::swapChildren(LeftistNode<T>* t) const
 {
